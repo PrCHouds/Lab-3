@@ -71,13 +71,39 @@ if __name__ == '__main__':
     lbl_bg = tk.Label(window, image=bg_img)
     lbl_bg.place(x=0, y=0, relwidth=1, relheight=1)
 
-    btn_gen = tk.Button(window, text=GEN_BTN ,width=20, command=key_gen, bg=BTN_BG_COLOR, fg=BTN_TEXT_COLOR, font=FONT_PARAMETERS, bd=15)
+    btn_gen = tk.Button(
+                    window, 
+                    text=GEN_BTN,
+                    width=20,
+                    command=key_gen,
+                    bg=BTN_BG_COLOR, 
+                    fg=BTN_TEXT_COLOR, 
+                    font=FONT_PARAMETERS, bd=15
+                    )
     btn_gen.place(relx=0.5, rely=0.85, anchor='center')
 
-    btn_cl = tk.Button(window, text=CANCEL_BTN, width=2, height=1, command=close, bg=BTN_BG_COLOR, fg=BTN_TEXT_COLOR, font=FONT_PARAMETERS, bd=15)
+    btn_cl = tk.Button(
+        window, 
+        text=CANCEL_BTN, 
+        width=2, 
+        height=1, 
+        command=close, 
+        bg=BTN_BG_COLOR, 
+        fg=BTN_TEXT_COLOR, 
+        font=FONT_PARAMETERS, 
+        bd=15
+        )
     btn_cl.place(relx=0.75, rely=0.85, anchor='center')
 
-    key_lbl = tk.Label(window, text=f'{FIELD_NAME}: {KEY}', font=FONT_PARAMETERS, bg=BTN_BG_COLOR, fg=BTN_TEXT_COLOR, borderwidth= 10, relief=tk.RAISED,)
+    key_lbl = tk.Label(
+        window, 
+        text=f'{FIELD_NAME}: {KEY}', 
+        font=FONT_PARAMETERS, 
+        bg=BTN_BG_COLOR, 
+        fg=BTN_TEXT_COLOR, 
+        borderwidth= 10, 
+        relief=tk.RAISED,
+        )
     key_lbl.place(relx=0.5, rely=0.73, anchor='center')
     pygame.mixer.init()
     pygame.mixer.music.load(MUSIC_FILE)
